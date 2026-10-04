@@ -549,32 +549,24 @@ img {
         gap: 15px;
         padding: 15px;
     }
-    
     .main-nav a {
         width: auto; 
         flex: 1 1 140px; 
     }
-
-    /* Галерея фраз: 2 колонки */
     .grid-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-
     header h1 {
         font-size: 28px;
     }
-
-    /* Уменьшаем и опускаем левый цветок, чтобы не перекрывал "Навыки" */
     .flower-left {
         width: 250px;
         height: 200px;
-        top: 0px; /* Убрали отрицательный отступ */
+        top: 0px;
     }
-    
-    /* Сдвигаем солнышко ниже, чтобы не перекрывало "Фразу недели" */
     .theme-switch {
         right: 20px;
-        top: 15px; /* Опустили внутрь шапки */
+        top: 15px;
         width: 70px;
         height: 70px;
     }
@@ -583,40 +575,33 @@ img {
     .grid-gallery {
         grid-template-columns: 1fr;
     }
-
     .main-nav {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    
     .main-nav a {
-        flex: none; /* Отключаем растягивание по высоте */
+        flex: none;
         width: 100%; 
         max-width: 250px; 
-        padding: 10px 0; /* Добавляем отступы, чтобы было удобно нажимать пальцем */
+        padding: 10px 0;
     }
-
     header h1 {
         font-size: 22px;
     }
     h2 {
         font-size: 22px;
     }
-
     .flower-left {
         width: 150px;
         height: 120px;
     }
-
-    /* Уменьшаем и сдвигаем правый лотос, чтобы он не перекрывал имя */
     .flower-right {
         width: 70px;
         height: 70px;
-        bottom: -15px; /* Сдвигаем ниже текста */
+        bottom: -15px;
         right: 0px;
     }
-
     .theme-switch {
         width: 50px;
         height: 50px;
@@ -629,7 +614,7 @@ img {
         width: 110px; 
     }
     .lang-switch {
-        right: 70px; 
+        right: 60px; 
         bottom: 27px; 
         width: 60px; 
         height: 60px;
