@@ -11,6 +11,8 @@
             --color-focus-ring: rgba(139, 189, 193, 0.3);
             --color-visited: #7a4b8a;
             --color-link-active: #c0392b;
+            --color-danger: #d9534f;
+            --color-danger-hover: #c9302c;
 
             --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
             --shadow-card-hover: 0 8px 15px rgba(0, 0, 0, 0.1);
@@ -111,9 +113,10 @@
         .main-nav {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
             background-color: var(--color-primary); 
-            padding: 15px 0; 
+            padding: 15px 20px; 
             position: relative;
             z-index: 1;
         }
@@ -479,6 +482,59 @@
             transform: scale(1) rotate(5deg);
         }
 
+/*Словарь*/
+        .dictionary-section {
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .dict-controls {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .dict-table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            text-align: center;
+            background: var(--color-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .dict-table th,
+        .dict-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--color-border);
+            border-right: 1px solid var(--color-border);
+            color: var(--color-text);
+            word-wrap: break-word;
+        }
+        .dict-table th:last-child,
+        .dict-table td:last-child {
+            border-right: none;
+        }
+        .dict-table th {
+            background-color: var(--color-primary);
+            color: var(--color-accent);
+            text-shadow: var(--text-shadow-header);
+        }
+        .dict-table tr:last-child td {
+            border-bottom: none;
+        }
+        .delete-word-btn {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: var(--color-danger);
+        }
+        .delete-word-btn:hover {
+            background-color: var(--color-danger-hover);
+        }
+
 /*Ссылки*/
         a {
             color: var(--color-primary);
@@ -584,17 +640,16 @@ img {
         grid-template-columns: 1fr;
     }
     .main-nav {
-        /* УДАЛИТЕ ЭТУ СТРОКУ: flex-direction: column; */
-        flex-wrap: wrap; /* Добавляем перенос строк по совету преподавателя */
+        flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
     }
     .main-nav a {
-        flex: 1 1 auto; /* Позволяем ссылкам растягиваться и переноситься */
+        flex: 1 1 auto;
         width: auto; 
         max-width: none; 
-        padding: 10px 15px; /* Увеличим отступы для удобства тач-интерфейса */
-        font-size: 16px; /* Слегка уменьшим шрифт, чтобы больше влезло */
+        padding: 10px 15px;
+        font-size: 16px;
     }
     header h1 {
         font-size: 22px;

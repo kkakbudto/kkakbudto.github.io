@@ -25,6 +25,7 @@
         <a href="#feedback">Обратная связь</a>
         <a href="#current-lang">Сейчас учу</a>
         <a href="#phrases">Фраза недели</a>
+        <a href="#dictionary">Словарь</a>
     </nav>
 
     <header>
@@ -149,6 +150,30 @@
                 <button class="audio-btn" data-audio="audio/phrase3.mp3" aria-label="Слушать произношение">🔊</button>
                 <img src="images/ENA.gif" id="daisy-gif" alt="Танцующая гифка">
             </div>
+        </div>
+    </section>
+
+    <section id="dictionary" class="dictionary-section">
+        <h2>Мой словарь</h2>
+
+        <div class="dict-controls">
+            <button type="button" id="add-word-btn">➕ Добавить слово</button>
+            <button type="button" id="toggle-dict-btn">👁️ Скрыть словарь</button>
+            <button type="button" id="clear-dict-btn">🗑️ Очистить словарь</button>
+        </div>
+
+        <div id="dictionary-container">
+            <table class="dict-table">
+                <thead>
+                    <tr>
+                        <th>Слово</th>
+                        <th>Перевод</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody id="dictionary-tbody">
+                </tbody>
+            </table>
         </div>
     </section>
 
